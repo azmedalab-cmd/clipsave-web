@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="İzinli sosyal medya videolarını MP4 olarak kaydetme arayüzü" />
+    <title>ClipSave — Video indir</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="title">
+        <div class="logo"><span>▶</span> ClipSave</div>
+        <h1 id="title">Videonu <em>MP4</em> olarak kaydet.</h1>
+        <p class="lead">İndirmeye yetkin olduğun herkese açık videonun bağlantısını yapıştır.</p>
+
+        <form id="download-form" class="download-card">
+          <label for="video-url">Video bağlantısı</label>
+          <div class="input-row">
+            <input id="video-url" name="video-url" type="url" autocomplete="off"
+              placeholder="https://www.instagram.com/reel/..." required />
+            <button type="submit" id="download-button">Videoyu hazırla</button>
+          </div>
+          <p class="hint">Yalnızca kendi videolarını veya indirme iznin olan içerikleri kullan.</p>
+          <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+        </form>
+
+        <div id="result" class="result" hidden>
+          <div class="result-icon">✓</div>
+          <div>
+            <strong>Video hazır</strong>
+            <p id="result-name">MP4 dosyanı indirebilirsin.</p>
+          </div>
+          <a id="save-button" class="save-button" href="#" download>MP4 indir</a>
+        </div>
+
+        <div class="steps" aria-label="Nasıl çalışır">
+          <article><span>1</span><h2>Bağlantıyı yapıştır</h2><p>Video sayfasının bağlantısını al.</p></article>
+          <article><span>2</span><h2>Hazırlanmasını bekle</h2><p>Sunucu izinli medya URL’sini doğrular.</p></article>
+          <article><span>3</span><h2>MP4’ü kaydet</h2><p>Dosyayı cihazına indir.</p></article>
+        </div>
+      </section>
+      <footer>ClipSave · İçeriğin haklarına ve platform kurallarına saygı göster.</footer>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
